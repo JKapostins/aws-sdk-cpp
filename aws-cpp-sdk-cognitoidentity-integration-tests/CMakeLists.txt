@@ -35,3 +35,4 @@ set_compiler_warnings(${PROJECT_NAME})
 
 target_link_libraries(${PROJECT_NAME} ${PROJECT_LIBS})
 copyDlls(${PROJECT_NAME} ${PROJECT_LIBS})
+SetSolutionFolder(${PROJECT_NAME} ${EXTERNAL_LIBRARY_SOLUTION_FOLDER})
