@@ -55,6 +55,7 @@ function(enable_unity_build UNITY_SUFFIX SOURCE_FILES)
 endfunction(enable_unity_build)
 
 macro(setup_install)
+    SetSolutionFolder(${PROJECT_NAME} ${EXTERNAL_LIBRARY_SOLUTION_FOLDER})
     if(SIMPLE_INSTALL)
         set(ALL_DEP_LIBS ${PLATFORM_DEP_LIBS_ABSTRACT_NAME} ${CLIENT_LIBS_ABSTRACT_NAME} ${CRYPTO_LIBS_ABSTRACT_NAME})
         generate_pkgconfig_link_flags(ALL_DEP_LIBS ALL_DEP_LIBS_LINK_FLAGS)
